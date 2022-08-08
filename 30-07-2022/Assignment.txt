@@ -1,0 +1,126 @@
+// This is code to create repo and push content in it 
+
+
+/*
+
+# Asignment:
+- Create a new repository (in your machine)
+- Add a file named hello.txt
+- Add content, "Hi, I am ..."
+- Create a repository on Github.
+- Push your code.
+- Host your code.
+- Share the hosted link.
+
+*/
+
+
+Vishal@DESKTOP-US3EQV6 MINGW64 ~/Desktop (master)
+$ git init assignment
+Initialized empty Git repository in C:/Users/Vishal/Desktop/assignment/.git/
+
+Vishal@DESKTOP-US3EQV6 MINGW64 ~/Desktop (master)
+$ cd assignment/
+
+Vishal@DESKTOP-US3EQV6 MINGW64 ~/Desktop/assignment (master)
+$ pwd
+/c/Users/Vishal/Desktop/assignment
+
+Vishal@DESKTOP-US3EQV6 MINGW64 ~/Desktop/assignment (master)
+$ touch hello.txt
+
+Vishal@DESKTOP-US3EQV6 MINGW64 ~/Desktop/assignment (master)
+$ pwd
+/c/Users/Vishal/Desktop/assignment
+
+Vishal@DESKTOP-US3EQV6 MINGW64 ~/Desktop/assignment (master)
+$ ll
+total 0
+-rw-r--r-- 1 Vishal 197121 0 Aug  9 01:44 hello.txt
+
+Vishal@DESKTOP-US3EQV6 MINGW64 ~/Desktop/assignment (master)
+$ vi hello.txt
+
+Vishal@DESKTOP-US3EQV6 MINGW64 ~/Desktop/assignment (master)
+$ ll
+total 1
+-rw-r--r-- 1 Vishal 197121 25 Aug  9 01:46 hello.txt
+
+Vishal@DESKTOP-US3EQV6 MINGW64 ~/Desktop/assignment (master)
+$ cat hello.txt
+Hii I'm Vishal Sonkamble
+
+Vishal@DESKTOP-US3EQV6 MINGW64 ~/Desktop/assignment (master)
+$ git add hello.txt
+warning: in the working copy of 'hello.txt', LF will be replaced by CRLF the next time Git touches it
+
+Vishal@DESKTOP-US3EQV6 MINGW64 ~/Desktop/assignment (master)
+$ git commit -m "Added hello.txt file"
+[master (root-commit) a347b53] Added hello.txt file
+ 1 file changed, 1 insertion(+)
+ create mode 100644 hello.txt
+
+Vishal@DESKTOP-US3EQV6 MINGW64 ~/Desktop/assignment (master)
+$ ll
+total 1
+-rw-r--r-- 1 Vishal 197121 25 Aug  9 01:46 hello.txt
+
+Vishal@DESKTOP-US3EQV6 MINGW64 ~/Desktop/assignment (master)
+$ git remote add origin https://github.com/sonkamblevishal/Assignment.git
+
+Vishal@DESKTOP-US3EQV6 MINGW64 ~/Desktop/assignment (master)
+$ git push
+fatal: The current branch master has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin master
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+Vishal@DESKTOP-US3EQV6 MINGW64 ~/Desktop/assignment (master)
+$ git push -u origin main
+error: src refspec main does not match any
+error: failed to push some refs to 'https://github.com/sonkamblevishal/Assignment.git'
+
+Vishal@DESKTOP-US3EQV6 MINGW64 ~/Desktop/assignment (master)
+$ git remote add origin https://github.com/sonkamblevishal/Assignment.git
+error: remote origin already exists.
+
+Vishal@DESKTOP-US3EQV6 MINGW64 ~/Desktop/assignment (master)
+$ git push add origin
+error: src refspec origin does not match any
+error: failed to push some refs to 'add'
+
+Vishal@DESKTOP-US3EQV6 MINGW64 ~/Desktop/assignment (master)
+$ git push
+fatal: The current branch master has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin master
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+Vishal@DESKTOP-US3EQV6 MINGW64 ~/Desktop/assignment (master)
+$ git remote add origin https://github.com/sonkamblevishal/Assignment.git
+error: remote origin already exists.
+
+Vishal@DESKTOP-US3EQV6 MINGW64 ~/Desktop/assignment (master)
+$ git branch -M main
+
+Vishal@DESKTOP-US3EQV6 MINGW64 ~/Desktop/assignment (main)
+$ git push -u origin main
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 257 bytes | 257.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+
+To https://github.com/sonkamblevishal/Assignment.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+
+Vishal@DESKTOP-US3EQV6 MINGW64 ~/Desktop/assignment (main)
+$
